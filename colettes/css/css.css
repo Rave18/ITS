@@ -1,0 +1,112 @@
+/* Add animation to "page content" */
+.animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: .6s;
+  animation-name: animatebottom;
+  animation-duration: .6s
+}
+@-webkit-keyframes animatebottom {
+  from { bottom:-100px; opacity:0 }
+  to { bottom:0px; opacity:1 }
+}
+@keyframes animatebottom {
+  from{ bottom:-100px; opacity:0 }
+  to{ bottom:0; opacity:1 }
+}
+html {
+  position: relative;
+  min-height: 100%;
+  overflow-x: hidden;
+}
+body div{
+  font-family: "Open Sans","Helvetica Neue","Montserrat",Helvetica,Arial,sans-serif !important;
+}
+label{
+  font-weight: bold !important;
+}
+/* Fonts */
+.btn .btn-primary, .btn .btn-success{
+  color: white !important;
+}
+table tbody, table thead{
+  text-align: center !important;
+}
+/* open-sans-regular - latin */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/opensans/open-sans-v15-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local('Open Sans Regular'), local('OpenSans-Regular'),
+       url('../fonts/opensans/open-sans-v15-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/opensans/open-sans-v15-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/opensans/open-sans-v15-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/opensans/open-sans-v15-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/opensans/open-sans-v15-latin-regular.svg#OpenSans') format('svg'); /* Legacy iOS */
+}
+/* open-sans-700 - latin */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/opensans/open-sans-v15-latin-700.eot'); /* IE9 Compat Modes */
+  src: local('Open Sans Bold'), local('OpenSans-Bold'),
+       url('../fonts/opensans/open-sans-v15-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/opensans/open-sans-v15-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/opensans/open-sans-v15-latin-700.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/opensans/open-sans-v15-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/opensans/open-sans-v15-latin-700.svg#OpenSans') format('svg'); /* Legacy iOS */
+}
+
+/* montserrat-regular - latin */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/montserrat/montserrat-v12-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local('Montserrat Regular'), local('Montserrat-Regular'),
+       url('../fonts/montserrat/montserrat-v12-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/montserrat/montserrat-v12-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/montserrat/montserrat-v12-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/montserrat/montserrat-v12-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/montserrat/montserrat-v12-latin-regular.svg#Montserrat') format('svg'); /* Legacy iOS */
+}
+/* montserrat-700 - latin */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/montserrat/montserrat-v12-latin-700.eot'); /* IE9 Compat Modes */
+  src: local('Montserrat Bold'), local('Montserrat-Bold'),
+       url('../fonts/montserrat/montserrat-v12-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/montserrat/montserrat-v12-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/montserrat/montserrat-v12-latin-700.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/montserrat/montserrat-v12-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/montserrat/montserrat-v12-latin-700.svg#Montserrat') format('svg'); /* Legacy iOS */
+}
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #reportg h4{
+    font-size: 15px;
+  }
+  @page{
+    margin-left: 5mm;
+    margin-right: 2mm;
+  }
+  #reportg, #reportg * {
+    visibility: visible;
+  }
+  #reportg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+  }
+  #backs{
+    display: none;
+  }
+}
